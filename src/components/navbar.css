@@ -1,0 +1,155 @@
+/* General reset */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .navbar {
+    background-color: #e5afaf;
+    color: #040404;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .logo a {
+    color: #040404;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links li a {
+    color: #040404;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  /* Highlight active link */
+  .nav-links li a.active-link {
+    color: #d75656; /* Highlight color for the active section */
+    font-weight: bold;
+  }
+  
+  /* Hover effect for links */
+  .nav-links li a:hover {
+    color: #d75656;
+  }
+  
+  /* Main content styles */
+  .content {
+    flex: 1;
+    padding: 120px 20px 20px; /* Add padding to avoid overlap with fixed navbar */
+    overflow-y: auto;
+    height: calc(100vh - 180px); /* Adjust content height for the header and footer */
+    margin-top: 100px; /* Space for the navbar */
+  }
+  
+  .content section {
+    margin-bottom: 40px;
+  }
+  
+  /* Footer Styling */
+  .footer {
+    background-color: #e5afaf;
+    color: #040404;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+  }
+  
+  .footer p {
+    margin: 5px 0;
+  }
+  
+  .footer a {
+    color: #146ca6;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-links a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #040404;
+  }
+  
+  .social-links a:hover {
+    color: #146ca6;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none; /* Hide links by default */
+      flex-direction: column; /* Stack links vertically */
+    }
+  
+    .nav-links.active {
+      display: flex; /* Show links when the menu is open */
+    }
+  
+    .hamburger-menu {
+      display: block; /* Show hamburger menu */
+      cursor: pointer; /* Change cursor on hover */
+    }
+  
+    .hamburger-menu span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      background-color: #fff;
+      transition: all 0.3s ease;
+    }
+  
+    .footer {
+      padding: 15px; /* Smaller footer padding on mobile */
+    }
+  
+    .social-links a {
+      font-size: 20px; /* Smaller social icon size on mobile */
+    }
+  
+    .content {
+      padding: 80px 10px; /* Adjust padding for mobile */
+    }
+  }
+  
+  
+  
+
+  
